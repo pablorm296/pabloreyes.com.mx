@@ -30,12 +30,23 @@ const { title, description, path, type } = Astro.props;
 </html>
 
 <style is:global>
+    :root {
+        --color-bg: #f5f5f5;
+        --color-text: #333333;
+        --color-text-muted: #555555;
+    }
+
     html {
         font-family: "Times New Roman", Times, serif;
         font-size: 16px;
         line-height: 1.5;
-        background-color: #f5f5f5;
-        color: #333333;
+        background-color: var(--color-bg);
+        color: var(--color-text);
+    }
+
+    body {
+        margin: 8rem auto;
+        padding: 2rem;
     }
 
     h1,
@@ -44,7 +55,7 @@ const { title, description, path, type } = Astro.props;
     h4,
     h5,
     h6 {
-        color: #333333;
+        color: var(--color-text);
         margin: 0 0 1em 0;
         font-weight: normal;
     }
@@ -53,40 +64,36 @@ const { title, description, path, type } = Astro.props;
         font-size: 2rem;
         margin-top: 1.5rem;
     }
-
     h2 {
         font-size: 1.75rem;
         margin-top: 1.25rem;
     }
-
     h3 {
         font-size: 1.5rem;
         margin-top: 1rem;
     }
-
     h4 {
         font-size: 1.25rem;
         margin-top: 0.875rem;
     }
-
     h5 {
         font-size: 1rem;
         margin-top: 0.75rem;
     }
-
     h6 {
         font-size: 0.875rem;
-        color: #555555;
+        color: var(--color-text-muted);
         margin-top: 0.5rem;
-    }
-
-    body {
-        margin: 8rem auto;
-        padding: 2rem;
     }
 
     div.app-container {
         max-width: 400px;
-        margin: 0 auto;
+        margin: 4rem auto;
+    }
+
+    @media (max-width: 768px) {
+        body {
+            margin: 8rem auto;
+        }
     }
 </style>
