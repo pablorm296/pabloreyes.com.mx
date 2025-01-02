@@ -3,9 +3,10 @@ interface Props {
     title: string;
     description: string;
     date: Date;
+    id: string;
 }
 
-const { title, description, date } = Astro.props;
+const { title, description, date, id } = Astro.props;
 
 const istoDateString = date.toISOString();
 const formattedDate = date.toLocaleDateString("es-MX", {
@@ -18,13 +19,16 @@ const formattedDate = date.toLocaleDateString("es-MX", {
 
 <article>
     <time datetime={istoDateString}>{formattedDate}</time>
-    <div>
+    <div class="content">
         <h1>
             {title}
         </h1>
         <p>
             {description}
         </p>
+    </div>
+    <div class="read-more">
+        <a href=`/blog/posts/${id}`>Read more →</a>
     </div>
 </article>
 
@@ -36,7 +40,7 @@ const formattedDate = date.toLocaleDateString("es-MX", {
         margin-bottom: 2rem;
     }
 
-    article div {
+    article div.contet {
         display: flex;
         flex-direction: column;
         row-gap: 0.25rem;
