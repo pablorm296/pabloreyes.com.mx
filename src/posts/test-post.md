@@ -6,14 +6,18 @@ author: Pablo Reyes Moctezuma
 tags: ["test", "post"]
 ---
 
-# Test Post
+# 1. Test Post
 
 This is a test post. 
 
-## Heading 2
+- [1. Test Post](#1-test-post)
+  - [1.1. Heading 2](#11-heading-2)
+    - [1.1.1. Heading 3](#111-heading-3)
+
+## 1.1. Heading 2
 
 This is a test post.
 
-### Heading 3
+### 1.1.1. Heading 3
 
 This is a test post.
