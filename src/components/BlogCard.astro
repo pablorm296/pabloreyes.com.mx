@@ -1,4 +1,6 @@
 ---
+import { formatDateTime } from "@/lib/datetime";
+
 interface Props {
     title: string;
     description: string;
@@ -8,17 +10,11 @@ interface Props {
 
 const { title, description, date, id } = Astro.props;
 
-const istoDateString = date.toISOString();
-const formattedDate = date.toLocaleDateString("es-MX", {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-    timeZone: "UTC",
-});
+const { humanDate, isoDate } = formatDateTime(date);
 ---
 
 <article>
-    <time datetime={istoDateString}>{formattedDate}</time>
+    <time datetime={isoDate}>{humanDate}</time>
     <div class="content">
         <h1>
             {title}
