@@ -8,7 +8,7 @@ tags: ["test", "post"]
 
 # 1. Test Post
 
-This is a test post. 
+This is a test post.
 
 - [1. Test Post](#1-test-post)
   - [1.1. Heading 2](#11-heading-2)
