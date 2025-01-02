@@ -21,6 +21,7 @@ const posts = await getCollection("blog");
                 title={post.data.title}
                 description={post.data.description}
                 date={post.data.date}
+                id={post.id}
             />
         ))
     }
