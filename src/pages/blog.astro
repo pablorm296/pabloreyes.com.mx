@@ -1,5 +1,9 @@
 ---
+import { getCollection } from "astro:content";
 import RootLayout from "@/layouts/Root.astro";
+import BlogCard from "@/components/BlogCard.astro";
+
+const posts = await getCollection("blog");
 ---
 
 <RootLayout title="Blog" description="This is the home page" type="website" path="/">
@@ -10,4 +14,21 @@ import RootLayout from "@/layouts/Root.astro";
         solutions. Whether you're here to learn, discuss, or discover new ideas, I hope you find value in these posts
         and join the conversation!
     </p>
+    <hr>
+    {
+        posts.map((post) => (
+            <BlogCard
+                title={post.data.title}
+                description={post.data.description}
+                date={post.data.date}
+            />
+        ))
+    }
 </RootLayout>
+<style>
+    hr {
+        margin: 2rem 0;
+        border: 0;
+        border-top: 1px solid var(--color-text-muted);
+    }
+</style>
