@@ -1,5 +1,5 @@
 ---
-import Navigation from '@/components/Navigation.astro';
+import Navigation from "@/components/Navigation.astro";
 
 interface Props {
     title: string;
@@ -27,7 +27,7 @@ const { title, description, path, type } = Astro.props;
     </head>
     <body>
         <div class="app-container">
-            <Navigation/>
+            <Navigation />
             <slot />
         </div>
     </body>
@@ -51,6 +51,12 @@ const { title, description, path, type } = Astro.props;
     body {
         margin: 4rem auto;
         padding: 2rem;
+    }
+
+    @media (min-width: 768px) {
+        body {
+            margin: 8rem auto;
+        }
     }
 
     h1,
@@ -108,11 +114,5 @@ const { title, description, path, type } = Astro.props;
     div.app-container {
         max-width: 400px;
         margin: 4rem auto;
-    }
-
-    @media (min-width: 768px) {
-        body {
-            margin: 8rem auto;
-        }
     }
 </style>
