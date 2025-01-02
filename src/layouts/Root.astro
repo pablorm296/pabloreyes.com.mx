@@ -1,4 +1,6 @@
 ---
+import Navigation from '@/components/Navigation.astro';
+
 interface Props {
     title: string;
     description: string;
@@ -24,6 +26,7 @@ const { title, description, path, type } = Astro.props;
     </head>
     <body>
         <div class="app-container">
+            <Navigation/>
             <slot />
         </div>
     </body>
