@@ -1,7 +1,7 @@
 ---
 title: Test Post
-date: 2025-01-01
 description: This is a test post.
+date: 2025-01-01
 author: Pablo Reyes Moctezuma
 tags: ["test", "post"]
 ---
