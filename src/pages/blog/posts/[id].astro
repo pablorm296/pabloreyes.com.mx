@@ -28,7 +28,8 @@ const { Content } = await render(post);
         <meta property="article:modified_time" content={isoDate} />
         <meta property="article:author" content="Pablo Reyes Moctezuma" />
         <meta property="article:section" content="Blog" />
-        <!-- Aray of post tags -->
+        <meta property="og:image" content=`/og/${post.id}.png` />
+        <!-- Array of post tags -->
         {post.data.tags.map(tag => <meta property="article:tag" content={tag} />)}
     </Fragment>
     <Content />
