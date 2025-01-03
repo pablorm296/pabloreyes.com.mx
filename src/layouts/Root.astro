@@ -127,6 +127,30 @@ const { title, description, path, type } = Astro.props;
         margin-bottom: 0;
     }
 
+    pre {
+        padding: 0.125rem;
+    }
+
+    /* 
+    For the line numbers, I found this amazing hack by
+    @alexpeattie on GitHub: https://github.com/shikijs/shiki/issues/3#issuecomment-830564854
+    */
+
+    code {
+        counter-reset: step;
+        counter-increment: step 0;
+    }
+
+    code .line::before {
+        content: counter(step);
+        counter-increment: step 1;
+        display: inline-block;
+        width: 2rem;
+        text-align: right;
+        margin-right: 0.5rem;
+        color: var(--color-text-muted);
+    }
+
     div.app-container {
         max-width: 400px;
         margin: 4rem auto;
