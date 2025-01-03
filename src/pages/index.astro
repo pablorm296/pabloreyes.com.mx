@@ -2,13 +2,43 @@
 import RootLayout from "@/layouts/Root.astro";
 ---
 
-<RootLayout
-    title="Home"
-    description="This is the home page"
-    type="website"
-    path="/"
->
-    <h1>Hello, Astro!</h1>
-    <p>Welcome to Astro.</p>
-    <p>This is a <a href="#">link</a></p>
+<RootLayout title="Home" description="This is the home page" type="website" path="/">
+    <h1>
+        Hello, World! <br />
+        I'm Pablo Reyes
+    </h1>
+    <p>
+        Born in 1996 and based in Mexico City, I am CTO at <a href="https://dataint.mx">DataInt</a>, a forward-thinking
+        Mexican startup that develops data-driven solutions to help businesses understand security risks and identify
+        high-impact events across the country. With a strong academic foundation in Politics and Public Administration
+        from El Colegio de México, I combine technical expertise and strategic insight to create innovative tools for
+        data analysis and decision-making.
+    </p>
+    <p>
+        <a href="/about"> Learn more about me and my work → </a>
+    </p>
+    <hr />
+    <p>You can find me on</p>
+    <ul>
+        <li>
+            <a href="https://x.com/p_reyes_m">𝕏</a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/pablo-reyes-m">LinkedIn</a>
+        </li>
+        <li>
+            <a href="https://bsky.app/profile/p-reyes.bsky.social">Bluesky</a>
+        </li>
+    </ul>
 </RootLayout>
+<style>
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        margin-right: 1rem;
+    }
+</style>
