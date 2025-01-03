@@ -45,7 +45,7 @@ const createSvgFromTitleAndDescription = async (title: string, description: stri
                     height: 630,
                     backgroundColor: "white",
                     fontFamily: "Times New Roman",
-                    borderLeft: "8px solid #333333",
+                    borderLeft: "16px solid #333333",
                 },
             },
         },
