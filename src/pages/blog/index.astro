@@ -1,0 +1,35 @@
+---
+import { getCollection } from "astro:content";
+import RootLayout from "@/layouts/Root.astro";
+import BlogCard from "@/components/BlogCard.astro";
+
+const posts = await getCollection("blog");
+---
+
+<RootLayout
+    title="Blog - Pablo Reyes Moctezuma"
+    description="Read my latest thoughts, tutorials, and projects on technology, data, and public policy."
+    type="website"
+    path="/"
+>
+    <h1>Blog</h1>
+    <p>
+        Here, I explore the intersection of technology, data, and public policy. Alongside these topics, you'll also
+        find coding tutorials and practical guides designed to help others solve challenges and create impactful
+        solutions. Whether you're here to learn, discuss, or discover new ideas, I hope you find value in these posts
+        and join the conversation!
+    </p>
+    <hr />
+    {
+        posts.map(post => (
+            <BlogCard title={post.data.title} description={post.data.description} date={post.data.date} id={post.id} />
+        ))
+    }
+</RootLayout>
+<style>
+    hr {
+        margin: 2rem 0;
+        border: 0;
+        border-top: 1px solid var(--color-text-muted);
+    }
+</style>

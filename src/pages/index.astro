@@ -1,11 +1,52 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import RootLayout from "@/layouts/Root.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<RootLayout
+    title="Home - Pablo Reyes Moctezuma"
+    description="Hi, I'm Pablo Reyes, CTO at DataInt. I share insights on technology, data, and public policy, along with projects and tutorials."
+    type="website"
+    path="/"
+>
+    <h1>
+        Hello, World! <br />
+        I'm Pablo Reyes
+    </h1>
+    <p>
+        Born in 1996 and based in Mexico City, I am CTO at <a href="https://dataint.mx">DataInt</a>, a forward-thinking
+        Mexican startup that develops data-driven solutions to help businesses understand security risks and identify
+        high-impact events across the country. With a strong academic foundation in Politics and Public Administration
+        from El Colegio de México, I combine technical expertise and strategic insight to create innovative tools for
+        data analysis and decision-making.
+    </p>
+    <p>
+        <a href="/about"> Learn more about me and my work → </a>
+    </p>
+    <hr />
+    <p>You can find me on</p>
+    <ul class="social">
+        <li>
+            <a href="https://x.com/p_reyes_m">𝕏</a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/pablo-reyes-m">LinkedIn</a>
+        </li>
+        <li>
+            <a href="https://bsky.app/profile/p-reyes.bsky.social">Bluesky</a>
+        </li>
+    </ul>
+    <p>
+        Or mail me at <a href="mailto:info@pabloreyes.com.mx">info@pabloreyes.com.mx</a>
+    </p>
+</RootLayout>
+<style>
+    ul.social {
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+
+    ul.social li {
+        margin-right: 1rem;
+    }
+</style>
