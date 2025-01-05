@@ -43,7 +43,7 @@ const { title, description, path, type } = Astro.props;
     }
 
     html {
-        font-family: "Times New Roman", Times, serif;
+        font-family: serif;
         font-size: 16px;
         line-height: 1.5;
         background-color: var(--color-bg);
@@ -56,6 +56,10 @@ const { title, description, path, type } = Astro.props;
     }
 
     @media (min-width: 768px) {
+        html {
+            font-size: 18px;
+        }
+
         body {
             margin: 8rem auto;
         }
