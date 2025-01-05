@@ -1,48 +1,50 @@
-# Astro Starter Kit: Basics
+Welcome to the repository for my personal website! 🚀 This project showcases my work, blog posts, and insights, all in one place. It's built with [Astro](https://astro.build/), a modern framework for creating fast, optimized, content-rich websites.
 
-```sh
-npm create astro@latest -- --template basics
+# Features
+
+- Blog section for sharing posts and tutorials
+- About page to highlight my journey and expertise
+- Brutalist design for a content-centered experience and a super lightweight website 
+- Built with Astro for excellent performance and scalability
+
+# Development
+
+## Getting Started
+
+To run this project locally:
+
+1. Clone the repository:
+   
+```bash
+git clone https://github.com/pablorm296/pabloreyes.com.mx.git
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+2. Install the required dependencies
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+npm install
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+3. Start the development server
 
-## 🧞 Commands
+```bash
+npm run dev
+```
 
-All commands are run from the root of the project, from a terminal:
+## Deploying using Docker
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+This website is deployed using Docker for simplicity and reliability. The repository includes a Dockerfile located in the root directory that:
 
-## 👀 Want to learn more?
+1. Builds the Astro website to generate static files.
+2. Uses NGINX to serve the static files.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+The NGINX configuration is located at `./server/nginx.conf`.
+
+# Roadmap
+
+- [ ] **Multilingual support (ES/EN):** As a native Spanish speaker, I pragmatically chose to release the first version of my website in English to reach a broader audience. However, I’d love to share content, especially coding tutorials and guides, in Spanish. While Astro makes this implementation straightforward, creating bilingual content will be a labor-intensive process.
+- [ ] **Serve the website from a solar-powered computer:** I'm fascinated by [the idea of a low-tech, solar-powered website](https://solar.lowtechmagazine.com/about/the-solar-website/) proposed by LOW←TECH MAGAZINE. In the future, I want to serve this website from a solar-powered computer at home. It would be exciting to know that my digital footprint is at least partially carbon-free.
+- [ ] **Play around with an NGINX honeypot:** Why should I trust you if you're requesting `/wp-admin/` or `.env` files to my server :wink:.
+- [ ] **Dithered images**: Again drawing inspiration from LOW←TECH MAGAZINE, I want to feature images processed with a dithering algorithm to reduce their size while maintaining a unique aesthetic. Although I’d love to integrate this into Astro’s build process eventually, I’ll likely start by manually dithering each image.
+- [ ] **Dark mode:** Because who doesn't love dark mode?
+- [ ] **RSS feed:** For those who still use RSS readers.
